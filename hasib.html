@@ -1,0 +1,48 @@
+<html>
+<head>
+<style>
+.ht-category-content:before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 4px;
+    border: 2px solid red;
+    height: 20px;
+    width: 20px;
+    background: #000;
+    border-radius: 50px;
+}
+.ht-category-content:active::before{
+   
+  
+    border: 2px solid #000;
+    height: 20px;
+    width: 20px;
+    background: #000;
+    border-radius: 50px;
+}
+
+
+.ht-category-content {
+    position: relative;
+margin-left:100px;
+}
+</style>
+
+</head>
+<body>
+<h1 class="ht-category-content">Hello</h1>
+<script>
+    function setActive(element) {
+        // Remove active class from all menu items
+        let items = document.querySelectorAll(".ht-category-content::before");
+        items.forEach(item => item.classList.remove("active"));
+
+        // Add active class to the clicked menu item
+        element.classList.add("active");
+    }
+</script>
+
+</body>
+
+</html>
